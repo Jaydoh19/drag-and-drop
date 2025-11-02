@@ -1,5 +1,26 @@
 const cards = document.querySelectorAll(".card");
 const lists = document.querySelectorAll(".list");
+const addCardBtn = document.querySelector(".add-card-btn");
+const toDoList = document.getElementById("list1");
+
+
+addCardBtn.addEventListener("click", () => {
+  const cardText = prompt("Enter card test: ");
+  if (!cardText) return;
+
+  //Create new card
+  const newCard = document.createElement("div");
+  newCard.classList.add("card");
+  newCard.setAttribute("draggable", "true");
+  newCard.textContent = cardText;
+  newCard.id = `card${Date.now()}`;
+
+  newCard.addEventListener("dragstart", dragStart);
+  newCard.addEventListener("dragend", dragEnd);
+
+  toDoList.appendChild(newCard);
+})
+
 
 for(const card of cards){
   card.addEventListener("dragstart", dragStart)
