@@ -90,6 +90,10 @@ h1 {
   background-color: #d1d3d8;
 }
 
+#list2 .card{
+  background-color: #d8db1fff;
+}
+
 
 
 @media(max-width: 768px){

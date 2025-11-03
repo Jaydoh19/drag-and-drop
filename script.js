@@ -66,4 +66,15 @@ function dragDrop(e){
 
   this.appendChild(card)
   this.classList.remove("over");
+
+    if (this.id === "list1") {
+    // To Do list
+    card.style.backgroundColor = "#fafafa"; // light gray
+  } else if (this.id === "list2") {
+    // In Progress list
+    card.style.backgroundColor = "#d8db1fff";
+  } else if (this.id === "list3") {
+    // Done list
+    card.style.backgroundColor = "lightgreen";
+  }
 }
